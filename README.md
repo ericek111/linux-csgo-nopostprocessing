@@ -21,5 +21,13 @@ make
 #### Run:
 You must run this as root!
 ```
+cd [install dir]
 sudo ./csgo_nopp
+```
+
+You can create a launcher, but you still need to log in as root.  
+Use either `gksu [install dir]/csgo_nopp` or make a simple bash script, so you won't have to enter your password every time you launch the game:
+```
+echo [user password] | sudo -S /bin/false
+sudo [install dir]/csgo_nopp
 ```

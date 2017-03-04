@@ -2,12 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <linux/input.h>
 #include <unistd.h>
 #include <sys/time.h>
-#include <pthread.h>
-#include <errno.h>
-#include <algorithm>
 
 #include "remote.hpp"
 
@@ -66,11 +62,10 @@ int main(int argc, char* argv[]) {
     unsigned long addressOfOverridePostProcessingDisablePointer = csgo.GetAbsoluteAddress((void*)(foundOverridePostProcessingDisableInstr), 2, 7);
     cout << ">>> Address of s_bOverridePostProcessingDisable: 0x" << std::hex << addressOfOverridePostProcessingDisablePointer << " - " << addressOfOverridePostProcessingDisablePointer - client.client_start << endl << endl;
 
+    bool disable = true;
 
     while (csgo.IsRunning()) {
-      	bool disable = true;
       	csgo.Write((void*) (addressOfOverridePostProcessingDisablePointer), &disable, sizeof(bool));
-
         usleep(1000000);
     }
 
