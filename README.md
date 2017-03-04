@@ -1,6 +1,6 @@
 # CS:GO No PostProcessing tool
 
-Disables postprocessing effects.
+Disables postprocessing effects in Counter-Strike: Global Offensive. Might be considered as a cheat.
 
 ### How to use:
 #### Dependencies:
@@ -26,8 +26,9 @@ sudo ./csgo_nopp
 ```
 
 You can create a launcher, but you still need to log in as root.  
-Use either `gksu [install dir]/csgo_nopp` or make a simple bash script, so you won't have to enter your password every time you launch the game:
+Use either `gksu [install dir]/csgo_nopp`, or make a simple bash script, so you won't have to enter **your password** every time you launch the game:
 ```
+#!/bin/bash
 echo [user password] | sudo -S /bin/false
 sudo [install dir]/csgo_nopp
 ```
