@@ -60,7 +60,7 @@ int main(int argc, char* argv[]) {
     cout << ">>> raw s_bOverridePostProcessingDisable instr. pointer: 0x" << std::hex << foundOverridePostProcessingDisableInstr << endl << endl;
 
     unsigned long addressOfOverridePostProcessingDisablePointer = csgo.GetAbsoluteAddress((void*)(foundOverridePostProcessingDisableInstr), 2, 7);
-    cout << ">>> Address of s_bOverridePostProcessingDisable: 0x" << std::hex << addressOfOverridePostProcessingDisablePointer << " - " << addressOfOverridePostProcessingDisablePointer - client.client_start << endl << endl;
+    cout << ">>> Address of s_bOverridePostProcessingDisable: 0x" << std::hex << addressOfOverridePostProcessingDisablePointer << endl << endl;
 
     bool disable = true;
 
