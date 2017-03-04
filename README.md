@@ -1,8 +1,8 @@
-# linux-csgo-nopostprocessing
+# CS:GO No PostProcessing tool
 
 Disables postprocessing effects.
 
-### How to install:
+### How to use:
 #### Dependencies:
 ```
 sudo apt-get update
@@ -16,4 +16,10 @@ git clone https://github.com/ericek111/linux-csgo-nopostprocessing
 cd linux-csgo-nopostprocessing
 cmake .
 make
+```
+
+#### Run:
+You must run this as root!
+```
+sudo ./csgo_nopp
 ```
